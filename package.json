@@ -8,13 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fvoordeckers/alphaess-client"
+    "url": "git+https://github.com/fvoordeckers/alphaess-client.git"
   },
   "scripts": {
     "build": "tsc"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
   "devDependencies": {
     "@types/axios": "^0.14.4",
     "@types/node": "^22.7.9",
