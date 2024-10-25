@@ -1,6 +1,6 @@
 {
   "name": "alphaess-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A JS client to get data from AlphaESS Cloud",
   "author": {
     "name": "Frederik Voordeckers",
