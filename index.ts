@@ -1,3 +1,3 @@
-import AlphaESSClient from "src/client";
+import AlphaESSClient from "./src/client";
 
 export default AlphaESSClient;

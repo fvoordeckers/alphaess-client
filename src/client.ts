@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-import crypto from 'crypto';
+import * as crypto from 'crypto';
 import { AlphaESSConfig, AlphaESSResponse, ChargeSettings, DischargeSettings, SystemData } from './types';
 import { BASE_URL, DEFAULT_TIMEOUT } from './constants';
 
@@ -75,7 +75,7 @@ export default class AlphaESSClient {
   }
   
   async getESSList(): Promise<SystemData[]> {
-    return this.apiGet<SystemData[]>('/getEssList') || [];
+    return await this.apiGet<SystemData[]>('/getEssList') || [];
   }
   
   async getLastPowerData(sysSn: string): Promise<any> {
@@ -119,7 +119,7 @@ export default class AlphaESSClient {
   async authenticate(): Promise<boolean> {
     try {
       const units = await this.getESSList();
-      return units.some(unit => 'sysSn' in unit);
+      return (units || []).some(unit => 'sysSn' in unit);
     } catch (error) {
       console.error(`Authentication error: ${error}`);
       throw error;
@@ -129,7 +129,7 @@ export default class AlphaESSClient {
   async getAllData(getPower: boolean = false, delay: number = 0): Promise<SystemData[]> {
     try {
       const allData: SystemData[] = [];
-      const units = await this.getESSList();
+      const units = await this.getESSList() || [];
       
       for (const unit of units) {
         if ('sysSn' in unit) {
