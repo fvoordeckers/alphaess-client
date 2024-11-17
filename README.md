@@ -40,9 +40,6 @@ const systems = await client.getESSList();
 
 // Get real-time power data
 const powerData = await client.getLastPowerData('your-system-serial');
-
-// Get all data for all systems
-const allData = await client.getAllData(true);
 ```
 
 ## ⚠️ Important Notes
