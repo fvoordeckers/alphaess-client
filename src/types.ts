@@ -87,7 +87,7 @@ export type OneDayPowerResponse = {
   ppv: number; // PV power
   sysSn: string; // System S/N
   uploadTime: string; // upload Time
-}[];
+};
 
 export type OneDayEnergyResponse = {
   eCharge: number; // total energy charged from battery，unit：kWh
@@ -99,7 +99,7 @@ export type OneDayEnergyResponse = {
   epv: number; // PV generation，unit：kWh
   sysSn: string; // System S/N
   theDate: string; // Date
-}[];
+};
 
 import { EVChargerControlMode, EVChargerStatus } from "./enums";
 
@@ -110,11 +110,11 @@ export type EVChargerListResponse = {
 
 export type EVChargerCurrentResponse = {
   currentsetting: number;
-}[];
+};
 
 export type EVChargerSetCurrentResponse = {
   currentsetting: number;
-}[];
+};
 
 export type EVChargerStatusResponse = {
   evchargerStatus: EVChargerStatus;
