@@ -1,6 +1,6 @@
 {
   "name": "alphaess-client",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A JS client to get data from AlphaESS Cloud",
   "author": {
     "name": "Frederik Voordeckers",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "build:publish": "yarn build && yarn publish"
+    "build:publish": "yarn build && npm publish"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
