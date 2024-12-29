@@ -79,11 +79,11 @@ export type LastPowerResponse = {
 };
 
 export type OneDayPowerResponse = {
-  cobat: number; // Battery capacity
+  cbat: number; // Battery capacity
   feedIn: number; // Feed-in
   gridCharge: number; // Grid purchase real-time power
   load: number; // Load
-  pChargingPile: number; // Charging pile power
+  pchargingPile: number; // Charging pile power
   ppv: number; // PV power
   sysSn: string; // System S/N
   uploadTime: string; // upload Time
