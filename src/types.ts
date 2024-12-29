@@ -87,7 +87,7 @@ export type OneDayPowerResponse = {
   ppv: number; // PV power
   sysSn: string; // System S/N
   uploadTime: string; // upload Time
-};
+}[];
 
 export type OneDayEnergyResponse = {
   eCharge: number; // total energy charged from battery，unit：kWh
