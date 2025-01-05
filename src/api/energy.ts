@@ -10,16 +10,10 @@ export const getLastPowerData = (api: API, sysSn: string) => {
 }
 
 export const getOneDayPowerBySn = (api: API, sysSn: string, queryDate: string) => {
-  const localDate = new Date().toISOString().split('T')[0];
-  const requestDate = queryDate === localDate ? queryDate : localDate;
-  
-  return api.get<OneDayPowerResponse>('/getOneDayPowerBySn', { sysSn, queryDate: requestDate });
+  return api.get<OneDayPowerResponse>('/getOneDayPowerBySn', { sysSn, queryDate });
 }
 
 export const getOneDateEnergyBySn = (api: API, sysSn: string, queryDate: string) => {
-  const localDate = new Date().toISOString().split('T')[0];
-  const requestDate = queryDate === localDate ? queryDate : localDate;
-  
-  return api.get<OneDayEnergyResponse>('/getOneDateEnergyBySn', { sysSn, queryDate: requestDate });
+  return api.get<OneDayEnergyResponse>('/getOneDateEnergyBySn', { sysSn, queryDate });
 }
 
